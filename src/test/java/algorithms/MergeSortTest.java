@@ -1,8 +1,10 @@
+package algorithms;
+
+import algorithms.MergeSort;
 import org.junit.Test;
 
 import java.util.*;
 
-import static java.util.Arrays.asList;
 import static org.junit.Assert.assertEquals;
 
 public class MergeSortTest {

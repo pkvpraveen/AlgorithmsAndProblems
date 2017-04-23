@@ -1,3 +1,5 @@
+package algorithms;
+
 public class MergeSort {
     int[] mergeSort(int[] array) {
         if (array.length == 0) {
