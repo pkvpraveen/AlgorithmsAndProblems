@@ -1,0 +1,22 @@
+package problems;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class PascalTriangleTest {
+
+    @Test
+    public void shouldGeneratePascalTriangle() {
+        int[][] expected = {
+                {1},
+                {1,1},
+                {1, 2, 1},
+                {1, 3, 3, 1},
+                {1, 4, 6, 4, 1}
+        };
+        assertArrayEquals(expected, new PascalTriangle().getPascalTriangle(5));
+
+
+    }
+}
