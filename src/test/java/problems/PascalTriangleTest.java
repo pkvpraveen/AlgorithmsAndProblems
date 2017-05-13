@@ -23,5 +23,18 @@ public class PascalTriangleTest {
         assertArrayEquals(expected, new PascalTriangle().pascalTriangleEfficientWay(5));
         long endTime1 = System.nanoTime();
         System.out.println(endTime1 - startTime1);
+
+        prettyPrint(new PascalTriangle().pascalTriangleEfficientWay(5));
+    }
+
+    private void prettyPrint(int[][] pascalTriangle) {
+        for (int i = 0; i < pascalTriangle.length; i++) {
+            System.out.format("%" + (pascalTriangle.length - i) * 2 + "s", " ");
+            for (int j = 0; j < pascalTriangle[i].length; j++) {
+
+                System.out.format("%4d", pascalTriangle[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
