@@ -5,7 +5,7 @@ class Printer {
     private boolean isPing = false;
 
     synchronized void printPing(int i) {
-        if (isPing) {
+        while (isPing) {
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -18,7 +18,7 @@ class Printer {
     }
 
     synchronized void printPong(int i) {
-        if (!isPing) {
+        while (!isPing) {
             try {
                 wait();
             } catch (InterruptedException e) {
